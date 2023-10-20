@@ -1,0 +1,32 @@
+<nav class="navbar">
+    <img src="https://academy.axera.it/wp-content/uploads/2023/03/Logo-Axera-Academy.svg" alt="Logo Azienda" class="logo">
+    <ul class="menu">
+        <li>
+            <a>Tech School</a>
+            <ul class="submenu">
+                <li><a (click)="mostraCorso('base')">MINECRAFT EDUCATION - Corso Base (7+)</a></li>
+                <li><a (click)="mostraCorso('avanzato')">MINECRAFT EDUCATION - Corso Avanzato (7+)</a></li>
+                <li><a (click)="mostraCorso('lego')">FIRST® LEGO® LEAGUE (9+)</a></li>
+            </ul>
+        </li>
+        <li>
+            <a>Digital Masters (18+)</a>
+            <ul class="submenu submenu1">
+                <li><a (click)="mostraCorso('modellazione')">Modellazione 3D – FUSION 360</a></li>
+                <li><a (click)="mostraCorso('smartphone')">SMARTPHONE 3° Età</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<br>
+<div *ngIf="corsoSelezionato">
+    
+    <ng-container [ngSwitch]="corsoSelezionato">
+    
+      <app-minecraft-base *ngSwitchCase="'base'"></app-minecraft-base>
+      <app-minecraft-avanzato *ngSwitchCase="'avanzato'"></app-minecraft-avanzato>
+      <app-lego-league *ngSwitchCase="'lego'"></app-lego-league>
+      <app-modellazione3-d *ngSwitchCase="'modellazione'"></app-modellazione3-d>
+      <app-smartphone *ngSwitchCase="'smartphone'"></app-smartphone>
+    </ng-container>
+  </div>
