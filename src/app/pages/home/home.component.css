@@ -84,3 +84,22 @@ body {
 .menu li:hover .submenu {
     display: block;
 }
+
+.nocorse {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 100vh; 
+    background-image: url('https://img.lovepik.com/photo/50061/5187.jpg_wh860.jpg'); 
+    background-size: cover;
+    /* text-align: center; */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Colore blu con opacità */
+    color:#ffffff
+  }
+  
+  
+  
+  

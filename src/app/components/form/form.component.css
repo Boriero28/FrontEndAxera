@@ -1,0 +1,21 @@
+.custom-form {
+    max-width: 600px;
+    margin: auto;
+  }
+  h3{
+    text-align: center;
+  }
+  .custom-form label {
+    font-weight: bold;
+  }
+  
+  .custom-form input,
+  .custom-form textarea {
+    border: 1px solid #ced4da;
+  }
+  
+  .custom-form input:focus,
+  .custom-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }

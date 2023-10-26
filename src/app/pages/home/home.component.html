@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <img src="https://academy.axera.it/wp-content/uploads/2023/03/Logo-Axera-Academy.svg" alt="Logo Azienda" class="logo">
+  <a href="/" (click)="reloadPage()"><img src="https://academy.axera.it/wp-content/uploads/2023/03/Logo-Axera-Academy.svg" alt="Logo Azienda" class="logo"></a>
     <ul class="menu">
         <li>
             <a>Tech School</a>
@@ -18,15 +18,65 @@
         </li>
     </ul>
 </nav>
-<br>
-<div *ngIf="corsoSelezionato">
-    
+
+<div *ngIf="!corsoSelezionato" class="nocorse d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4">
+        <div class="card custom-card">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title text-center">MINECRAFT EDUCATION - Corso Base (7+)</h3>
+            <button class="btn btn-primary"  (click)="mostraCorso('iscrivitiBase')">Iscriviti</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card custom-card">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title text-center">MINECRAFT EDUCATION - Corso Avanzato (7+)</h3>
+            <button class="btn btn-primary" (click)="mostraCorso('iscrivitiAvanzato')">Iscriviti</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card custom-card">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title text-center">Modellazione 3D – FUSION 360</h3>
+            <button class="btn btn-primary" (click)="mostraCorso('iscrivitiModellazione')">Iscriviti</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card custom-card">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title text-center">FIRST® LEGO® LEAGUE (9+)</h3>
+            <button class="btn btn-primary" (click)="mostraCorso('iscrivitiLego')">Iscriviti</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card custom-card">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h3 class="card-title text-center">SMARTPHONE 3° Età</h3> 
+            <button class="btn btn-primary" (click)="mostraCorso('iscrivitiSmarphone')">Iscriviti</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="corsoSelezionato" class="nocorse">
     <ng-container [ngSwitch]="corsoSelezionato">
-    
-      <app-minecraft-base *ngSwitchCase="'base'"></app-minecraft-base>
-      <app-minecraft-avanzato *ngSwitchCase="'avanzato'"></app-minecraft-avanzato>
-      <app-lego-league *ngSwitchCase="'lego'"></app-lego-league>
-      <app-modellazione3-d *ngSwitchCase="'modellazione'"></app-modellazione3-d>
-      <app-smartphone *ngSwitchCase="'smartphone'"></app-smartphone>
+        <app-form [corso]="'MINECRAFT EDUCATION - Corso Base (7+)'" *ngSwitchCase="'iscrivitiBase'"></app-form>
+        <app-form [corso]="'MINECRAFT EDUCATION - Corso Avanzato (7+)'" *ngSwitchCase="'iscrivitiAvanzato'"></app-form>
+        <app-form [corso]="'FIRST® LEGO® LEAGUE (9+)'" *ngSwitchCase="'iscrivitiLego'"></app-form>
+        <app-form [corso]="'Modellazione 3D – FUSION 360'" *ngSwitchCase="'iscrivitiModellazione'"></app-form>
+        <app-form [corso]="'SMARTPHONE 3° Età'" *ngSwitchCase="'iscrivitiSmarphone'"></app-form>
+        <app-minecraft-base [corso]="'MINECRAFT EDUCATION - Corso Base (7+)'" *ngSwitchCase="'base'"></app-minecraft-base>
+        <app-minecraft-base [corso]="'MINECRAFT EDUCATION - Corso Avanzato (7+)'" *ngSwitchCase="'avanzato'"></app-minecraft-base>
+        <app-minecraft-base [corso]="'FIRST® LEGO® LEAGUE (9+)'" *ngSwitchCase="'lego'"></app-minecraft-base>
+        <app-minecraft-base [corso]="'Modellazione 3D – FUSION 360'" *ngSwitchCase="'modellazione'"></app-minecraft-base>
+        <app-minecraft-base [corso]="'SMARTPHONE 3° Età'" *ngSwitchCase="'smartphone'"></app-minecraft-base>
     </ng-container>
   </div>

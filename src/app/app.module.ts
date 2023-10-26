@@ -5,21 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './pages/home/home.component';
-import { MinecraftBaseComponent } from './components/minecraft-base/minecraft-base.component';
-import { MinecraftAvanzatoComponent } from './components/minecraft-avanzato/minecraft-avanzato.component';
-import { LegoLeagueComponent } from './components/lego-league/lego-league.component';
-import { Modellazione3DComponent } from './components/modellazione3-d/modellazione3-d.component';
-import { SmartphoneComponent } from './components/smartphone/smartphone.component';
+import { MinecraftBaseComponent } from './components/gestionale/minecraft-base.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MinecraftBaseComponent,
-    MinecraftAvanzatoComponent,
-    LegoLeagueComponent,
-    Modellazione3DComponent,
-    SmartphoneComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

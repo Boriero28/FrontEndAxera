@@ -1,0 +1,51 @@
+<span>-</span>
+<div class="container mt-5">
+  
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form class="custom-form p-4 bg-light border rounded">
+        <h3>Iscrivi al corso {{corso}}</h3>
+        <div class="form-group">
+          
+          <label for="nomeCognome">Nome e Cognome</label>
+          <input type="text" class="form-control" id="nomeCognome" placeholder="Nome e Cognome">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="clienteCheck">
+          <label class="form-check-label" for="clienteCheck">
+            Sei cliente AXERA/Ovunque?
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Indirizzo Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Indirizzo Email">
+        </div>
+        <div class="form-group">
+          <label for="numeroCellulare">Numero di Cellulare</label>
+          <input type="tel" class="form-control" id="numeroCellulare" placeholder="Numero di Cellulare">
+        </div>
+        <div class="form-group">
+          <label for="nomeCognomeFiglio">Nome e Cognome Figlio Partecipante</label>
+          <input type="text" class="form-control" id="nomeCognomeFiglio" placeholder="Nome e Cognome Figlio Partecipante">
+        </div>
+        <div class="form-group">
+          <label for="dataNascita">Data di Nascita</label>
+          <input type="date" class="form-control" id="dataNascita">
+        </div>
+        <div class="form-group">
+          <label for="noteAggiuntive">Note Aggiuntive</label>
+          <textarea class="form-control" id="noteAggiuntive" rows="3" placeholder="Eventuali note aggiuntive"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="privacyCheck1">
+          <label class="form-check-label" for="privacyCheck1">Accetto la privacy policy</label>
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="privacyCheck2">
+          <label class="form-check-label" for="privacyCheck2">Accetto la seconda privacy policy</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Invia</button>
+      </form>
+    </div>
+  </div>
+</div>

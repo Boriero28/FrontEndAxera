@@ -14,5 +14,9 @@ export class HomeComponent {
   mostraCorso(corso: string): void {
     this.corsoSelezionato = corso;
   }
+
+  reloadPage() {
+    window.location.reload();
+  }
   
 }
